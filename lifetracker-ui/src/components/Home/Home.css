@@ -1,6 +1,56 @@
-.tiles {
-  display: flex;
-  align-items: center;
+.home-page {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns as desired */
+  gap: 20px; /* Adjust the gap between images as desired */
+}
+
+.Fitness,
+.Food,
+.Rest,
+.Planner {
+  position: relative;
+  text-align: center;
+}
+
+.Fitness p,
+.Food p,
+.Rest p,
+.Planner p {
+  margin-top: -300px; /* Add some spacing above the text */
+  font-family: Arial, sans-serif; /* Adjust the font family as desired */
+  font-size: 16px; /* Adjust the font size as desired */
+  transition: font-size 0.3s ease-in-out;
+}
+
+.Fitness:hover p,
+.Food:hover p,
+.Rest:hover p,
+.Planner:hover p {
+  font-size: 20px; /* Adjust the enlarged font size on hover */
+}
+
+.Fitness img,
+.Food img,
+.Rest img,
+.Planner img {
   width: 100%;
-  gap: 20px;
+  max-width: 400px; /* Adjust the maximum width as desired */
+  height: 300px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.Fitness:hover img,
+.Food:hover img,
+.Rest:hover img,
+.Planner:hover img {
+  transform: scale(1.1); /* Adjust the scale factor on hover */
+}
+
+@media screen and (max-width: 768px) {
+  .home-page {
+    grid-template-columns: repeat(2, 1fr); /* Change to 2 columns on smaller screens */
+  }
 }

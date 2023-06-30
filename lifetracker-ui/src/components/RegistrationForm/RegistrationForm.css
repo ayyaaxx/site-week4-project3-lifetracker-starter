@@ -1,0 +1,59 @@
+.registration-form-container {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  margin-top: 20px;
+  border: 2px solid #ccc;
+}
+
+.create-account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.create-account h2 {
+  margin-bottom: 10px;
+}
+
+.create-account img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.submit-registration {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-registration:hover {
+  background-color: #45a049;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
