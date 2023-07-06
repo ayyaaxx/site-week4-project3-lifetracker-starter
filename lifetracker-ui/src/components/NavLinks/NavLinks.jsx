@@ -2,18 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./NavLinks.css";
 
-const NavLinks = ({ loggedIn }) => {
-  // const history = useHistory();
-
-  // const handleLogout = () => {
-  //   localStorage.removeItem("lifetracker_token");
-  //   // Refresh the page to reset user data
-  //   history.go(0);
-  // };
-
+const NavLinks = ({ loggedIn, setLoggedIn }) => {
+ 
   const handleLogout = () => {
-    localStorage.removeItem("lifetracker_token");
-    window.location.reload();
+    //remove the stored token and setLoggedIn as false
+    localStorage.removeItem("token");
+    setLoggedIn(false);
+    window.location = "/"
   };
   
 

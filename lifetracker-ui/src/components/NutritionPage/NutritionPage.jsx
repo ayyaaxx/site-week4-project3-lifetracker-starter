@@ -1,8 +1,10 @@
 import React from 'react'
+import NutritionFeed from '../NutritionFeed/NutritionFeed'
 
 const NutritionPage = () => {
   return (
-    <div>
+    <div className = "nutrition-page">
+      <NutritionFeed/>
       
     </div>
   )

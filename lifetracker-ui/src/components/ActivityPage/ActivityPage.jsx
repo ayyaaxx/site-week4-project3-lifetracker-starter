@@ -10,14 +10,16 @@ const ActivityPage = ({ appState }) => {
 
   return (
     <div className="activity-page">
+      <div className = "activity-label">
       <h3>Activity Feed</h3>
-      
-      {isProcessing ? (
+      </div>
+     {isProcessing ? (
         <Loading />
       ) : (
         <ActivityFeed activityData={activityData} />
         // <ActivityFeed />
-      )}
+      )} 
+  
     </div>
   );
 };

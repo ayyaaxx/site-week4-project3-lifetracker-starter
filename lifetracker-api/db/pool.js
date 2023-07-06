@@ -6,8 +6,20 @@ CREATE TABLE IF NOT EXISTS users(
         id SERIAL PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
         email VARCHAR(255) NOT NULL UNIQUE,
-        password VARCHAR(255) NOT NULL
+        password VARCHAR(255) NOT NULL,
+        username VARCHAR(255) NOT NULL,
+        last_name VARCHAR(255) NOT NULL
     );
+    
+    CREATE TABLE IF NOT EXISTS nutrition(
+      id SERIAL PRIMARY KEY,
+      name VARCHAR(255) NOT NULL,
+      category VARCHAR(255) NOT NULL,
+      calories VARCHAR(255) NOT NULL,
+      image_url VARCHAR(255) NOT NULL,
+      user_id VARCHAR(255) NOT NULL,
+      created_at DATE NOT NULL
+  );
 `;
 
 //DB information to connect

@@ -58,3 +58,7 @@ body {
     color: #333;
   }
   
+  .logout-button{
+    max-width: 100px;
+
+  }

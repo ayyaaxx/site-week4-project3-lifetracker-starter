@@ -6,13 +6,13 @@ const RegistrationForm = ({ handleRegistration }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("")
-  const [userName, setUserName] = useState("")
-  const [lastname, setLastName] = useState("")
+  const [username, setUserName] = useState("")
+  const [last_name, setLastName] = useState("")
 
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    handleRegistration(name, email, password);
+    handleRegistration(name, email, password, username, last_name);
   };
 
   return (
@@ -41,7 +41,7 @@ const RegistrationForm = ({ handleRegistration }) => {
           className="form-input"
           type="username"
           name="username"
-          value={userName}
+          value={username}
           onChange= {(e) => setUserName(e.target.value)}
           placeholder="Username"
         />
@@ -61,7 +61,7 @@ const RegistrationForm = ({ handleRegistration }) => {
           className="form-input"
           type="text"
           name="Lastname"
-          value={lastname}
+          value={last_name}
           onChange= {(e) => setLastName(e.target.value)}
           placeholder="Lastname"
         />
@@ -94,3 +94,4 @@ const RegistrationForm = ({ handleRegistration }) => {
 };
 
 export default RegistrationForm;
+

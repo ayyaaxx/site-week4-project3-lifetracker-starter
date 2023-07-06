@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.css"
 import NavLinks from "../NavLinks/NavLinks";
 
-const Navbar = ({loggedIn }) => {
+const Navbar = ({loggedIn, setLoggedIn }) => {
   return (
     <nav className="navbar">
       <div className="logo">
@@ -15,7 +15,7 @@ const Navbar = ({loggedIn }) => {
         </Link>
       </div>
       {/* Additional navigation links can be added here */}
-      <NavLinks loggedIn = {loggedIn} />
+      <NavLinks loggedIn = {loggedIn} setLoggedIn = {setLoggedIn} />
     </nav>
   );
 };
