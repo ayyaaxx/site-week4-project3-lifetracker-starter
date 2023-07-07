@@ -1,0 +1,36 @@
+/* .activity-feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+   */
+  button {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .total-excercise,
+  .hour-sleep,
+  .avg-daily {
+    margin-top: 20px;
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  
+
+   
+  

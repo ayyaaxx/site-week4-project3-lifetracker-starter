@@ -45,7 +45,7 @@ const pool = require("../db/pool");
 // get the sleep information
 router.get("/", async (req, res) => {
   try {
-    const query = 'SELECT * FROM sleep';
+    const query = 'SELECT * FROM users, sleep WHERE sleep.user_id = users.id';
     const result = await pool.query(query);
     res.json(result.rows);
   } catch (error) {

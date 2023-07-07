@@ -24,7 +24,8 @@ CREATE TABLE IF NOT EXISTS nutrition(
 CREATE TABLE IF NOT EXISTS sleep(
         id SERIAL PRIMARY KEY,
         sleeptime TIMESTAMP NOT NULL,
-        waketime TIMESTAMP NOT NULL
+        waketime TIMESTAMP NOT NULL,
+        user_id INTEGER NOT NULL
   );
 `;
 

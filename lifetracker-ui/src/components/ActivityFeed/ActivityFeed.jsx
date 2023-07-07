@@ -1,19 +1,20 @@
 import "./ActivityFeed.css"
 import React from 'react'
-      // totalCaloriesPerDay - an array of items containing summary data about the total calories consumed per day
-      // avgCaloriesPerCategory - an array of items containing summary data about the average calories consumed per category
+import { Link } from "react-router-dom";
+import ActivityHero from "../ActivityHero/ActivityHero";
 
 const ActivityFeed = () => {
   return (
     <div className = "activity-feed">
+      <ActivityHero/>
       <button>
         Add Excercise 
       </button>
       <button>
-        Log Sleep 
-      </button>
+        <Link to="/sleep">Log Sleep</Link>
+    </button>
       <button>
-        Record Nutrition
+      <Link to="/nutrition">Record Nutrition</Link> 
       </button>
       <div className = "total-excercise">
       <h2>Total Excercise Minutes</h2>

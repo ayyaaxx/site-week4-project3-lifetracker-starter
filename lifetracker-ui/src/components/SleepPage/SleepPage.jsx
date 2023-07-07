@@ -1,5 +1,6 @@
 import React from 'react'
 import SleepForm from '../SleepForm/SleepForm'
+import "./SleepPage.css"
 
 const SleepPage = ({user_id, sleeptime, setStartTime, waketime, setEndTime}) => {
   return (
