@@ -11,14 +11,20 @@ CREATE TABLE IF NOT EXISTS users(
         last_name VARCHAR(255) NOT NULL
     );
     
-    CREATE TABLE IF NOT EXISTS nutrition(
-      id SERIAL PRIMARY KEY,
-      name VARCHAR(255) NOT NULL,
-      category VARCHAR(255) NOT NULL,
-      calories VARCHAR(255) NOT NULL,
-      image_url VARCHAR(255) NOT NULL,
-      user_id VARCHAR(255) NOT NULL,
-      created_at DATE NOT NULL
+CREATE TABLE IF NOT EXISTS nutrition(
+        id SERIAL PRIMARY KEY,
+        name VARCHAR(255) NOT NULL,
+        category VARCHAR(255) NOT NULL,
+        calories VARCHAR(255) NOT NULL,
+        image_url VARCHAR(255) NOT NULL,
+        user_id VARCHAR(255) NOT NULL,
+        created_at DATE NOT NULL
+    );
+
+CREATE TABLE IF NOT EXISTS sleep(
+        id SERIAL PRIMARY KEY,
+        sleeptime TIMESTAMP NOT NULL,
+        waketime TIMESTAMP NOT NULL
   );
 `;
 

@@ -16,7 +16,7 @@ const NavLinks = ({ loggedIn, setLoggedIn }) => {
     <div className="nav-links">
       <Link to="/activity" className = "nav-link">Activity</Link>
       <Link to="/nutrition" className = "nav-link">Nutrition</Link>
-      <Link to="/resources" className = "nav-link">Resources</Link>
+      <Link to="/sleep" className = "nav-link">Sleep</Link>
       {loggedIn ? (
         <button className="logout-button" onClick={handleLogout}>
           Logout

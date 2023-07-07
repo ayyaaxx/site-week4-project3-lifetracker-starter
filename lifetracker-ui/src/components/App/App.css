@@ -14,5 +14,13 @@ body {
 
 
 .non-activity{
-  color: pink;
+  font-size: 30px;
+}
+
+.non-nutrition{
+  font-size: 30px;
+}
+
+.non-sleep{
+  font-size: 30px;
 }
