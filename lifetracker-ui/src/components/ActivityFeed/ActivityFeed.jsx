@@ -34,7 +34,7 @@ const ActivityFeed = () => {
         <div className="avg-daily">
           <h2>Average Daily Calories</h2>
           <div className="activity-card">
-            <p>Daily Categories:</p>
+            <p>Daily Calories:</p>
           </div>
         </div>
       </div>

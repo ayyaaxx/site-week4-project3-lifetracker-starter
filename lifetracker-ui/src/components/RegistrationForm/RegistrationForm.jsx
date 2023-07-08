@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./RegistrationForm.css";
 
 const RegistrationForm = ({ handleRegistration }) => {
@@ -9,10 +10,11 @@ const RegistrationForm = ({ handleRegistration }) => {
   const [username, setUserName] = useState("")
   const [last_name, setLastName] = useState("")
 
-
+const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     handleRegistration(name, email, password, username, last_name);
+    navigate("/activity")
   };
 
   return (

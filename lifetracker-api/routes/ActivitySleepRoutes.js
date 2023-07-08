@@ -6,7 +6,7 @@ const pool = require("../db/pool");
 // get the sleep information
 router.get("/", async (req, res) => {
   try {
-    const query = 'SELECT * FROM users, sleep WHERE sleep.user_id = users.id';
+    const query = 'SELECT AVG(EXTRACT(EPOCH FROM (waketime - sleeptime)) / 3600) AS average_sleep_duration FROM sleep';
     const result = await pool.query(query);
     res.json(result.rows);
   } catch (error) {
@@ -15,21 +15,4 @@ router.get("/", async (req, res) => {
   }
 });
 
-// post request that pushes data to front-end displaying the sleep time
-router.post("/", async (req, res) => {
-  try {
-    const { sleeptime, waketime, user_id } = req.body;
 
-    const query =
-      "INSERT INTO sleep (sleeptime, waketime, user_id) VALUES ($1, $2, $3) RETURNING *";
-    const values = [sleeptime, waketime, user_id];
-
-    const result = await pool.query(query, values);
-    res.status(201).json(result.rows[0]);
-  } catch (error) {
-    console.error("Error:", error);
-    res.status(500).json({ error: "Internal server error" });
-  }
-});
-
-module.exports = router;
